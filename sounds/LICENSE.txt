@@ -1,0 +1,13 @@
+Sound used in Seed & Destroy (ZR-102)
+
+File: drop_004.ogg
+Pack: "Interface Sounds" (1.0) by Kenney (www.kenney.nl), created 11-02-2020
+Source: https://kenney.nl/assets/interface-sounds
+Downloaded: 15 November 2026. Only this file is used; it is unchanged.
+
+Licence: Creative Commons Zero, CC0 1.0 Universal
+http://creativecommons.org/publicdomain/zero/1.0/
+
+From the pack's License.txt: "This content is free to use in personal,
+educational and commercial projects. Support us by crediting Kenney or
+www.kenney.nl (this is not mandatory)".

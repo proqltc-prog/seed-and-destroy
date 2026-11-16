@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=overlays-content">
+<meta name="theme-color" content="#0b1d3a">
+<title>Seed &amp; Destroy</title>
+<style>
+  :root {
+    --bg1: #0b1d3a;
+    --bg2: #13325e;
+    --accent: #ffcc4d;
+    --egg: #ffd9e4;
+    --text: #f4f7ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: var(--bg1);
+    color: var(--text);
+    font-family: "Trebuchet MS", system-ui, sans-serif;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #wrap {
+    position: fixed; inset: 0;
+    /* keep clear of a notch or rounded corners on phones (ZR-40) */
+    /* Capacitor 8 injects --safe-area-inset-* on Android (edge-to-edge, API 36, ZR-49) */
+    padding: var(--safe-area-inset-top, env(safe-area-inset-top)) var(--safe-area-inset-right, env(safe-area-inset-right))
+      var(--safe-area-inset-bottom, env(safe-area-inset-bottom)) var(--safe-area-inset-left, env(safe-area-inset-left));
+    display: flex; align-items: center; justify-content: center;
+  }
+  canvas {
+    display: block;
+    touch-action: none; /* the game handles drags itself, e.g. scrolling the leaderboard (ZR-60) */
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    background: linear-gradient(180deg, var(--bg2), var(--bg1));
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+  }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="360" height="640" aria-label="Seed &amp; Destroy"></canvas></div>
+<script type="module">
+  import { start } from './src/main.js';
+  start({ canvas: document.getElementById('game'), win: window });
+</script>
+</body>
+</html>
